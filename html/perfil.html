@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artScript - Galeria de Arte</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/tudo.css">
+    <link rel="stylesheet" href="../css/portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header permanece intacto conforme solicitado -->
+    <header>
+       <div class="logo">
+            <img src="../images/Logo.png" alt="artScript">
+            <span class="botaoHeader" id="Opcoes"> <a href="../html/HomeRestrita.html"> Home</a></span>
+            <span class="botaoHeader" id="Opcoes"> <a href="../html/sobre.html"> Sobre</a></span>
+          <span class="botaoHeader" id="Opcoes"> <a href="../html/evento.html"> Evento</a></span>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar">
+            <button class="clear-button">×</button>
+        </div>
+        <div class="profile-menu">
+           
+
+<div class="botao-container">
+        <div class="texto-area">
+            <span class="texto"> <a href="../html/perfil.html"> N.user </a></span>
+        </div>
+        <div class="imagem-area">
+            <img src="../images/download.jfif" alt="Avatar do usuário" onerror="this.style.display='none';
+             this.nextElementSibling.style.display='flex';">
+            <div class="imagem-placeholder" style="display: none;"></div>
+        </div>
+    </div>
+
+            <nav class="nav">
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção do perfil do usuário -->
+    <section class="perfil-usuario">
+        <div class="container-perfil">
+            <div class="foto-perfil">
+                <img src="../images/profile.png" alt="Foto de perfil do usuário">
+            </div>
+            <div class="info-perfil">
+                <h1 class="nome-artista">Nome do Artista</h1>
+                
+                <!-- Estatísticas abaixo do nome -->
+                <div class="estatisticas">
+                    <div class="estatistica">
+                        <span class="numero">42</span>
+                        <span class="label">Obras</span>
+                    </div>
+                    <div class="estatistica">
+                        <span class="numero">1.2k</span>
+                        <span class="label">Seguidores</span>
+                    </div>
+                    <div class="iconeMensagem">
+                        <a href="../html/ChatSeguro.html"> <i class="fas fa-message" id="mensagem"></i> </a>
+                    </div>
+                </div>
+                
+                <p class="descricao-perfil">
+                    Artista digital especializado em ilustrações e arte conceitual. 
+                    Apaixonado por criar mundos fantásticos e personagens únicos através da arte digital.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Área de obras em destaque com gradiente roxo -->
+    <section class="obras-destaque">
+        <div class="container-destaque">
+            <h2 class="titulo-destaque">Obras em Destaque</h2>
+            <div class="galeria-destaque">
+                <div class="item-destaque">
+                    <img src="../images/art1.jpg" alt="Obra em destaque 1">
+                    <div class="overlay-destaque">
+                        <h3>Arte Urbana</h3>
+                    </div>
+                </div>
+                <div class="item-destaque">
+                    <img src="../images/art2.jpg" alt="Obra em destaque 2">
+                    <div class="overlay-destaque">
+                        <h3>Cena Noturna</h3>
+                    </div>
+                </div>
+                <div class="item-destaque">
+                    <img src="../images/art3.jpg" alt="Obra em destaque 3">
+                    <div class="overlay-destaque">
+                        <h3>Esboço Perfil</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfólio principal - transformação da galeria original -->
+    <main class="meu-portfolio">
+        <div class="container-portfolio">
+            <h2 class="titulo-portfolio">Meu Portfólio</h2>
+            
+            <!-- Lista organizada de imagens sem descrição -->
+            <div class="grade-portfolio">
+                <!-- Primeira linha -->
+                <div class="item-portfolio">
+                    <img src="../images/art1.jpg" alt="Arte 1">
+                </div>
+                <div class="item-portfolio">
+                    <img src="../images/art1.jpg" alt="Arte 2">
+                </div>
+                <div class="item-portfolio">
+                    <img src="../images/art1.jpg" alt="Arte 3">
+                </div>
+                <div class="item-portfolio">
+                    <img src="../images/art1.jpg" alt="Arte 4">
+                </div>
+                <div class="item-portfolio">
+                    <img src="../images/art1.jpg" alt="Arte 5">
+                </div>
+                <div class="item-portfolio">
+                    <img src="../images/art1.jpg" alt="Arte 6">
+                </div>
+
+                <!-- Segunda linha -->
+                <div class="item-portfolio">
+                    <img src="../images/art1.jpg" alt="Arte 7">
+                </div>
+                <div class="item-portfolio">
+                    <img src="../images/art2.jpg" alt="Arte 8">
+                </div>
+                <div class="item-portfolio">
+                    <img src="../images/art2.jpg" alt="Arte 9">
+                </div>
+                <div class="item-portfolio">
+                    <img src="../images/art2.jpg" alt="Arte 10">
+                </div>
+                <div class="item-portfolio">
+                    <img src="../images/art2.jpg" alt="Arte 11">
+                </div>
+                <div class="item-portfolio">
+                    <img src="../images/art2.jpg" alt="Arte 12">
+                </div>
+
+                <!-- Terceira linha -->
+                <div class="item-portfolio">
+                    <img src="../images/art3.jpg" alt="Arte 13">
+                </div>
+                <div class="item-portfolio">
+                    <img src="../images/art3.jpg" alt="Arte 14">
+                </div>
+                <div class="item-portfolio">
+                    <img src="../images/art3.jpg" alt="Arte 15">
+                </div>
+                <div class="item-portfolio">
+                    <img src="../images/art3.jpg" alt="Arte 16">
+                </div>
+                <div class="item-portfolio">
+                    <img src="../images/art3.jpg" alt="Arte 17">
+                </div>
+                <div class="item-portfolio">
+                    <img src="../images/art3.jpg" alt="Arte 18">
+                </div>
+            </div>
+        </div>
+    </main>
+ 
+     <!--menu hamburgue-->
+ 
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="main-menu">
+  <div class="menu-icon" aria-hidden="true">
+    <span class="horizontal"></span>
+    <span class="vertical"></span>
+  </div>
+</button>
+
+<nav id="main-menu" class="menu-panel" aria-hidden="true">
+  <ul>
+    <li><a href="../html/Publicar.html" tabindex="-1">Publicar</a></li>
+  </ul>
+</nav>
+
+<script>
+  const menuBtn = document.querySelector('.menu-btn');
+  const menuPanel = document.getElementById('main-menu');
+  const links = menuPanel.querySelectorAll('a');
+
+  menuBtn.addEventListener('click', () => {
+    const isActive = menuBtn.classList.toggle('active');
+    menuBtn.setAttribute('aria-expanded', isActive);
+    if(isActive) {
+      menuPanel.classList.add('open');
+      menuPanel.setAttribute('aria-hidden', 'false');
+      links.forEach(link => link.setAttribute('tabindex', '0'));
+    } else {
+      menuPanel.classList.remove('open');
+      menuPanel.setAttribute('aria-hidden', 'true');
+      links.forEach(link => link.setAttribute('tabindex', '-1'));
+    }
+  });
+</script>
+<!--menu hamburgue-->
+
+    <script src="../html/script.js"></script>
+
+</body>
+</html>

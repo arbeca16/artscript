@@ -1,0 +1,249 @@
+#banner {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: linear-gradient(135deg, #806cb4 0%, #7253b9 50%, #6B46C1 100%);
+    padding: 14px 20px;
+    margin-top: 5px;
+}
+
+#DescriçãoSobre {
+    flex: 1;
+    margin-right: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: right;
+}
+
+#slider {
+    width: 800px;
+    height: 350px;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    position: relative;
+}
+
+#slider img {
+    width: 700px;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: -10px 5px 40px rgba(0, 0, 0, 0.8);
+}
+
+#b1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#b2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.fix {
+    display: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Intel';
+    background-color: #2a2a2a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+#banner{
+    background: linear-gradient(135deg, #806cb4 0%, #7253b9 50%, #6B46C1 100%);
+    padding: 14px 20px;
+    margin-top: 5px;
+}
+/* Header */
+.header {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-img {
+    height: 90px;
+    width: auto;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Main Content */
+.main {
+    margin-top: 500px;
+    max-width:1500px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero-section {
+    margin-bottom: 3rem;
+    margin-left: 40%;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: lobster;
+    margin-bottom: 2rem;
+    text-align: left;
+    color: #ffffff;
+    font-family: 'Intel';
+}
+
+.heart {
+    width: 80px;
+    height: 80px;
+}
+
+/* Cards Section */
+.cards-section {
+    margin-top: 3rem;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #2a2a2a;
+    font-family: 'Intel';
+}
+
+.card p {
+    font-size: 0.9rem;
+    line-height: 2.0;
+    color: #161616;
+}
+
+.desenvolvedores {
+    background-color: #e8e8e8;
+}
+
+.dev-list {
+    list-style: none;
+    padding: 0;
+}
+
+.dev-list li {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #161616;
+    border-bottom: 1px solid #ddd;
+    
+
+}
+
+.dev-list li:last-child {
+    border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+    
+    .main {
+        padding: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .heart-icon {
+        margin-top: 1rem;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .card {
+        padding: 1rem;
+    }
+    
+    .heart {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.profile-image {
+  width: 28px;
+  height: 28px; 
+  border-radius: 70%; 
+  margin-right: 6px; 
+  vertical-align: middle; 
+}
+
+
+ 

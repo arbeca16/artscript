@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal de Upload de Imagens</title>
+    <link rel="stylesheet" href="../css/modal.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Botão para abrir o modal -->
+    <div class="demo-container">
+        <button id="openModal" class="open-btn">Abrir Modal de Upload</button>
+    </div>
+
+    <!-- Overlay do modal -->
+    <div id="modalOverlay" class="modal-overlay">
+        <!-- Botões de saída no topo -->
+        <div class="top-buttons">
+            <button class="exit-btn" id="exitPerfil"> <a href="../html/perfil.html"> EXIT PERFIL </a></button>
+            <button class="exit-btn" id="exitHome"><a href="../html/HomeRestrita.html"> EXIT HOME </a></button>
+        </div>
+
+        <!-- Modal principal -->
+        <div class="modal-container">
+            <!-- Logo COLOCAR PAVÃO-->
+            <div class="logo-container">
+                <div class="logo">
+                    <span>ArtScript</span>
+                </div>
+            </div>
+
+            <!-- Área de upload -->
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-content">
+                    <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                    <p class="upload-text">FAÇA UPLOAD</p>
+                    <p class="upload-subtitle">Clique aqui ou arraste uma imagem</p>
+                </div>
+                <input type="file" id="fileInput" accept="image/*" hidden>
+            </div>
+
+            <!-- Preview da imagem -->
+            <div class="image-preview" id="imagePreview" style="display: none;">
+                <img id="previewImg" src="" alt="Preview">
+                <button class="remove-image" id="removeImage">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Botões de ação -->
+            <div class="action-buttons">
+                <button class="action-btn cancel-btn" id="cancelBtn">CANCELAR</button>
+                <button class="action-btn icon-btn" id="addBtn" title="Adicionar">
+                    <i class="fas fa-plus"></i>
+                </button>
+                <button class="action-btn description-btn" id="descriptionBtn">DESCRIÇÃO</button>
+            </div>
+        </div>
+
+        <!-- Botões inferiores -->
+        <div class="bottom-buttons">
+            <button class="bottom-btn permissions-btn" id="permissionsBtn">PERMISSÕES</button>
+            <button class="bottom-btn publish-btn" id="publishBtn">PUBLICAR</button>
+        </div>
+    </div>
+
+    <!-- Modal de descrição -->
+    <div id="descriptionModal" class="description-modal">
+        <div class="description-content">
+            <h3>Adicionar Descrição</h3>
+            <textarea id="descriptionText" placeholder="Digite a descrição da imagem..."></textarea>
+            <div class="description-buttons">
+                <button class="desc-btn cancel" id="cancelDescription">Cancelar</button>
+                <button class="desc-btn save" id="saveDescription">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de permissões -->
+    <div id="permissionsModal" class="permissions-modal">
+        <div class="permissions-content">
+            <h3>Configurar Permissões</h3>
+            <div class="permission-options">
+                <label class="permission-option">
+                    <input type="radio" name="permission" value="public" checked>
+                    <span>Público - Todos podem ver</span>
+                </label>
+                <label class="permission-option">
+                    <input type="radio" name="permission" value="friends">
+                    <span>Amigos - Apenas amigos podem ver</span>
+                </label>
+                <label class="permission-option">
+                    <input type="radio" name="permission" value="private">
+                    <span>Privado - Apenas você pode ver</span>
+                </label>
+            </div>
+            <div class="permissions-buttons">
+                <button class="perm-btn cancel" id="cancelPermissions">Cancelar</button>
+                <button class="perm-btn save" id="savePermissions">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../html/Publicar.js"></script>
+</body>
+</html>
+

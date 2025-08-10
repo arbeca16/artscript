@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artScript - Chat</title>
+    <link rel="stylesheet" href="../css/Chat.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/tudo.css">
+</head>
+<body>
+    <!-- Header -->
+      <header>
+       <div class="logo">
+            <img src="../images/Logo.png" alt="artScript">
+            <span class="botaoHeader" id="Opcoes"> <a href="../html/HomeRestrita.html"> Home</a></span>
+            <span class="botaoHeader" id="Opcoes"> <a href="../html/sobre.html"> Sobre</a></span>
+          <span class="botaoHeader" id="Opcoes"> <a href="../html/evento.html"> Evento</a></span>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar">
+            <button class="clear-button">×</button>
+        </div>
+        <div class="profile-menu">
+           
+
+<div class="botao-container">
+        <div class="texto-area">
+            <span class="texto"> <a href="../html/perfil.html"> N.user </a></span>
+        </div>
+        <div class="imagem-area">
+            <img src="../images/download.jfif" alt="Avatar do usuário" onerror="this.style.display='none';
+             this.nextElementSibling.style.display='flex';">
+            <div class="imagem-placeholder" style="display: none;"></div>
+        </div>
+    </div>
+
+            <nav class="nav">
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Grupos Section -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Grupos</h3>
+                <div class="groups-container">
+                    <div class="group-avatars">
+                        <div class="avatar-group">
+                            <div class="avatar avatar-small">
+                                <img src="../images/avatar2.png" alt="Avatar" class="avatar-img">
+                            </div>
+                            <div class="avatar avatar-small">
+                                <img src="../images/avatar1.png" alt="Avatar" class="avatar-img">
+                            </div>
+                            <div class="avatar avatar-small">
+                                <img src="../images/avatar3.png" alt="Avatar" class="avatar-img">
+                            </div>
+                            <div class="avatar avatar-small">
+                                <img src="../images/avatar4.png" alt="Avatar" class="avatar-img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conversas Section -->
+            <div class="sidebar-section">
+                <h3 class="section-title">Conversas</h3>
+                <div class="conversations-list">
+                    <div class="conversation-item active">
+                        <div class="avatar">
+                            <img src="../images/avatar1.png" alt="Avatar 1" class="avatar-img">
+                        </div>
+                        <span class="conversation-name">Avatar 1</span>
+                    </div>
+                    <div class="conversation-item">
+                        <div class="avatar">
+                            <img src="../images/avatar3.png" alt="Lucas" class="avatar-img">
+                        </div>
+                        <span class="conversation-name">Lucas</span>
+                    </div>
+                    <div class="conversation-item">
+                        <div class="avatar">
+                            <img src="../images/avatar3.png" alt="Lucas" class="avatar-img">
+                        </div>
+                        <span class="conversation-name">Lucas</span>
+                    </div>
+                    <div class="conversation-item">
+                        <div class="avatar">
+                            <img src="../images/avatar1.png" alt="Avatar 1" class="avatar-img">
+                        </div>
+                        <span class="conversation-name">Avatar 1</span>
+                    </div>
+                    <div class="conversation-item">
+                        <div class="avatar">
+                            <img src="../images/avatar3.png" alt="Lucas" class="avatar-img">
+                        </div>
+                        <span class="conversation-name">Lucas</span>
+                    </div>
+                    <div class="conversation-item">
+                        <div class="avatar">
+                            <img src="../images/avatar3.png" alt="Lucas" class="avatar-img">
+                        </div>
+                        <span class="conversation-name">Lucas</span>
+                    </div>
+                    <div class="conversation-item">
+                        <div class="avatar">
+                            <img src="../images/avatar1.png" alt="Avatar 1" class="avatar-img">
+                        </div>
+                        <span class="conversation-name">Avatar 1</span>
+                    </div>
+                    <div class="conversation-item">
+                        <div class="avatar">
+                            <img src="../images/avatar3.png" alt="Lucas" class="avatar-img">
+                        </div>
+                        <span class="conversation-name">Lucas</span>
+                    </div>
+                    <div class="conversation-item">
+                        <div class="avatar">
+                            <img src="../images/avatar3.png" alt="Lucas" class="avatar-img">
+                        </div>
+                        <span class="conversation-name">Lucas</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Chat Area -->
+        <main class="chat-area">
+            <!-- Chat Header with Avatar -->
+            <div class="chat-header">
+                <div class="chat-avatar-large">
+                    <img src="../images/avatar1.png" alt="Avatar 1" class="avatar-img">
+                </div>
+                <span class="chat-title">Avatar 1</span>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="chat-messages" id="chatMessages">
+                <!-- Message from other user -->
+                <div class="message message-left">
+                    <div class="message-avatar">
+                        <img src="../images/avatar1.png" alt="Avatar 1" class="avatar-img">
+                    </div>
+                    <div class="message-bubble">
+                        <div class="message-text">Oi, bom dia, boa tarde ou boa noite!</div>
+                    </div>
+                </div>
+                
+                <div class="message message-left">
+                    <div class="message-avatar">
+                        <img src="../images/avatar1.png" alt="Avatar 1" class="avatar-img">
+                    </div>
+                    <div class="message-bubble">
+                        <div class="message-text">Esse é um teste de como ficaria as mensagens no chat</div>
+                    </div>
+                </div>
+
+                <!-- Message from current user -->
+                <div class="message message-right">
+                    <div class="message-bubble">
+                        <div class="message-text">Oi, bom dia, boa tarde ou boa noite!</div>
+                    </div>
+                    <div class="message-avatar">
+                        <img src="../images/avatar3.png" alt="Lucas" class="avatar-img">
+                    </div>
+                    <span class="message-sender">Lucas</span>
+                </div>
+                
+                <div class="message message-right">
+                    <div class="message-bubble">
+                        <div class="message-text">Esse é um teste de como ficaria as mensagens no chat</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input -->
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" placeholder="" id="messageInput">
+                <button class="send-button" id="sendButton">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

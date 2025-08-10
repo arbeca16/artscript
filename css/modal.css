@@ -1,0 +1,570 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Intel';
+    background: linear-gradient(135deg, #806cb4 0%, #7253b9 50%, #6B46C1 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container de demonstração */
+.demo-container {
+    text-align: center;
+}
+
+.open-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.open-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay do modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #806cb4 0%, #7253b9 50%, #6B46C1 100%);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Botões superiores */
+.top-buttons {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.exit-btn {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+}
+
+.exit-btn a {
+    transform: translateY(-2px);
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+}
+
+.exit-btn:hover {
+    transform: translateY(-2px);
+    color:rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+
+.exit-btn a:link{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+
+/* Container principal do modal */
+.modal-container {
+    background: linear-gradient(145deg, #5a5a5a, #4a4a4a);
+    border-radius: 25px;
+    padding: 40px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-family: 'Intel';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.logo i {
+    font-size: 28px;
+    color: #7253b9;
+}
+
+/* Área de upload */
+.upload-area {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 60px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-area:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.upload-area.dragover {
+    background: rgba(169, 105, 189, 0.2);
+    border-color: #a569bd;
+}
+
+.upload-content {
+    color: white;
+}
+
+.upload-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.upload-text {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.upload-subtitle {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Preview da imagem */
+.image-preview {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.image-preview img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.remove-image {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(65, 65, 65, 0.8);
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.remove-image:hover {
+    background:rgba(65, 65, 65, 0.8);
+    transform: scale(1.1);
+}
+
+/* Botões de ação */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cancel-btn {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateY(-2px);
+}
+
+.icon-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.icon-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.description-btn {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.description-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Botões inferiores */
+.bottom-buttons {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.bottom-btn {
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.permissions-btn {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.permissions-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateY(-2px);
+}
+
+.publish-btn {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.publish-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateY(-2px);
+}
+
+/* Modal de descrição */
+.description-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.description-modal.active {
+    display: flex;
+}
+
+.description-content {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    animation: slideUp 0.3s ease;
+}
+
+.description-content h3 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.description-content textarea {
+    width: 100%;
+    height: 120px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 14px;
+    resize: vertical;
+    margin-bottom: 20px;
+    font-family: 'Intel';
+}
+
+.description-content textarea:focus {
+    outline: none;
+    border-color: #a569bd;
+}
+
+.description-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.desc-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.desc-btn.cancel {
+    background: #ddd;
+    color: #666;
+}
+
+.desc-btn.cancel:hover {
+    background: #ccc;
+}
+
+.desc-btn.save {
+    background: #a569bd;
+    color: white;
+}
+
+.desc-btn.save:hover {
+    background: #8e44ad;
+}
+
+/* Modal de permissões */
+.permissions-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.permissions-modal.active {
+    display: flex;
+}
+
+.permissions-content {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    animation: slideUp 0.3s ease;
+}
+
+.permissions-content h3 {
+    margin-bottom: 25px;
+    color: #333;
+    text-align: center;
+}
+
+.permission-options {
+    margin-bottom: 25px;
+}
+
+.permission-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.permission-option:hover {
+    background: #f8f9fa;
+}
+
+.permission-option input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #a569bd;
+}
+
+.permission-option span {
+    font-size: 14px;
+    color: #333;
+}
+
+.permissions-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.perm-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.perm-btn.cancel {
+    background: #ddd;
+    color: #666;
+}
+
+.perm-btn.cancel:hover {
+    background: #ccc;
+}
+
+.perm-btn.save {
+    background: #a569bd;
+    color: white;
+}
+
+.perm-btn.save:hover {
+    background: #8e44ad;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .modal-container {
+        width: 95%;
+        padding: 30px 20px;
+    }
+    
+    .top-buttons {
+        padding: 0 20px;
+    }
+    
+    .bottom-buttons {
+        padding: 0 20px;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .action-buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .upload-area {
+        padding: 40px 15px;
+    }
+    
+    .upload-text {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .exit-btn, .bottom-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .upload-text {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    
+    .upload-icon {
+        font-size: 36px;
+    }
+}
+

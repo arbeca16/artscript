@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/Login.css" />
+    <title>logue-se ou cadastra-se</title>
+  </head>
+
+  <body>
+    <div class="container" id="container">
+      <div class="form-container sign-up">
+  <form >
+          <h1 class="hh">CADASTRA-SE</h1>
+          <br><br>
+           <input type="text" placeholder="Nick name" required />
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
+          <input type="password" placeholder="Password" required />
+          <input type="tel" placeholder="tel" required />
+          
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <label for="opcoes">Como você quer navegar?</label>
+          <select id="opcoes" name="opcoes">
+          <option value="op1" selected>Artista</option>
+          <option value="op2">Público</option>
+          <option value="op3">Empresa</option>
+          </select>
+        </div>
+        <BR>
+          <button class="OpLogin"> <a href="../html/perfil.html"> CADASTRAR </a></button>
+  </form>
+      </div>
+      <div class="form-container sign-in">
+        <form>
+          <h1>ENTRAR</h1>
+          <br><br>
+  
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" required />
+          <button class="OpLogin"><a href="../html/perfil.html">ENTRAR </a> </button>
+          <BR>
+          <button class="botao-abaixo"> <a href="../html/Home.html"> HOME </a></button>
+        </form>
+      </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <img src="../images/logotcc.png" alt="logo" width="300" height="300">
+            <button class="hidden" id="login">AREA LOGIN</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <BR><BR>
+             <img src="../images/logotcc.png" alt="logo" width="300" height="300">
+             <BR>
+            <p>
+             Não possui conta?
+             <button class="hidden" id="register">CADASTRA-SE</button>
+            </p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../html/scriptLogin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+
+  body {
+    margin: 0;
+    height: 100vh;
+      background-color: #2a2a2a;
+    color: #fff;
+    font-family: 'Intel';
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  /* Botão fixo no canto inferior direito */
+  .menu-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 56px;
+    height: 56px;
+    background-color: #181818;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease;
+    z-index: 1002;
+  }
+  .menu-btn:hover {
+    background-color: #111111;
+  }
+
+  /* Linhas do botão para o efeito de + e x */
+  .menu-icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+  .menu-icon span {
+    position: absolute;
+    background-color: rgb(255, 254, 254);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  /* Linha horizontal */
+  .menu-icon span.horizontal {
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    transform: translateY(-50%);
+  }
+  /* Linha vertical */
+  .menu-icon span.vertical {
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    transform: translateX(-50%);
+  }
+
+  /* Quando ativado para x */
+  .menu-btn.active .menu-icon span.horizontal {
+    transform: translateY(-50%) rotate(140deg);
+    top: 50%;
+  }
+  .menu-btn.active .menu-icon span.vertical {
+    transform: translateX(-50%) rotate(-225deg);
+  }
+
+  /* Painel de menu vertical que abre para cima, tamanho padrão maior */
+  .menu-panel {
+    position: fixed;
+    bottom: 80px; /* 56 botão + 24 de margem */
+    right: 20px;
+    width: 260px;
+    max-height: 300px; /* altura maior para conteúdo mais visível */
+    background-color: #000000;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 4px 15px rgba(78, 25, 226, 0.781);
+    overflow-y: auto;
+    transform-origin: bottom center;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  /* Abre o painel com scale vertical */
+  .menu-panel.open {
+    transform: scaleY(1);
+  }
+
+  .menu-panel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  .menu-panel li {
+    flex: none;
+  }
+  .menu-panel a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    display: block;
+    padding: 8px 4px;
+    border-radius: 6px;
+  }
+  .menu-panel a:hover {
+    color: #42a5f5;
+    background-color: rgba(66, 165, 245, 0.15);
+  }
+
+  /* Scrollbar styling */
+  .menu-panel::-webkit-scrollbar {
+    width: 6px;
+  }
+  .menu-panel::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+  }
+  .menu-panel::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Estilos para o cabeçalho */
+header {
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: #775BAD;
+    position: sticky;
+    top: 3;
+    z-index: 100;
+
+}
+

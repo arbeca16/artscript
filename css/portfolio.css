@@ -1,0 +1,468 @@
+/* CSS específico para o portfólio - portfolio.css */
+/* Nomes simplificados em português */
+
+/* Seção do perfil do usuário */
+.perfil-usuario {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 40px 20px;
+    margin-top: 20px;
+}
+
+.container-perfil {
+    max-width: 1200px;
+    margin: 10 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.foto-perfil {
+    flex-shrink: 0;
+}
+
+.foto-perfil img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-right: 150px;
+}
+
+.foto-perfil img:hover {
+    transform: scale(1.05);
+}
+
+/* Informações do perfil ficam ao lado da foto */
+.info-perfil {
+    flex: 1;
+    min-width: 300px;
+}
+
+.nome-artista {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 0 0 20px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estatísticas ficam abaixo do nome */
+.estatisticas {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.estatistica {
+    text-align: center;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 80px;
+}
+
+.estatistica:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.iconeMensagem {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.iconeMensagem a{
+    text-emphasis: none;
+    color: rgb(124, 72, 192);
+}
+
+.iconeMensagem {
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 50px;
+}
+
+.iconeMensagem:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+.mensagem{
+    color: rgb(49, 49, 49);
+    min-width: 50px;
+}
+
+.numero {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #8b5cf6;
+    margin-bottom: 5px;
+}
+
+.label {
+    font-size: 0.9rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.label a:link{
+    text-decoration: none;
+    color: #8b5cf6;
+}
+
+/* Descrição fica abaixo das estatísticas */
+.descricao-perfil {
+    font-size: 1.1rem;
+    color: #5a6c7d;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 600px;
+}
+
+/* Área de obras em destaque com gradiente roxo */
+.obras-destaque {
+    background: linear-gradient(135deg, #806cb4 0%, #7253b9 50%, #6B46C1 100%);
+    padding: 60px 20px;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.obras-destaque::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(139, 92, 246, 0.1) 0%, rgba(124, 58, 237, 0.2) 100%);
+    pointer-events: none;
+}
+
+.container-destaque {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.titulo-destaque {
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin: 0 0 35px 0;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.galeria-destaque {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.item-destaque {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.item-destaque:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.item-destaque img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.item-destaque:hover img {
+    transform: scale(1.1);
+}
+
+.overlay-destaque {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 30px 20px 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.item-destaque:hover .overlay-destaque {
+    transform: translateY(0);
+}
+
+.overlay-destaque h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Filtros de categoria aprimorados */
+.category-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.filter {
+    padding: 12px 24px;
+    background: #fff;
+    border: 2px solid #e9ecef;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #6b7280;
+    position: relative;
+    overflow: hidden;
+}
+
+.filter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.filter:hover::before {
+    left: 100%;
+}
+
+.filter:hover {
+    border-color: #8b5cf6;
+    color: #8b5cf6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(139, 92, 246, 0.2);
+}
+
+.filter.active {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    border-color: #7c3aed;
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+}
+
+/* Portfólio principal */
+.meu-portfolio {
+    padding: 60px 20px;
+    background: #2a2a2a;
+}
+
+.container-portfolio {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.titulo-portfolio {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 0 50px 0;
+    position: relative;
+}
+
+.titulo-portfolio::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #8b5cf6, #7c3aed);
+    border-radius: 2px;
+}
+
+/* Grid do portfólio - lista organizada */
+.grade-portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+    padding: 20px 0;
+}
+
+.item-portfolio {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    background: #fff;
+    cursor: pointer;
+}
+
+.item-portfolio:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.item-portfolio img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block; /* Garante que a imagem seja exibida */
+}
+
+.item-portfolio:hover img {
+    transform: scale(1.05);
+}
+
+/* Efeito de overlay sutil no hover */
+.item-portfolio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(124, 58, 237, 0.2));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.item-portfolio:hover::before {
+    opacity: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-perfil {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+    
+    .nome-artista {
+        font-size: 2rem;
+    }
+    
+    .titulo-destaque, .titulo-portfolio {
+        font-size: 2rem;
+    }
+    
+    .galeria-destaque {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .grade-portfolio {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .category-filters {
+        gap: 10px;
+    }
+    
+    .filter {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+    
+    .estatisticas {
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .foto-perfil img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .estatistica {
+        padding: 12px 16px;
+        min-width: 70px;
+    }
+    
+    .grade-portfolio {
+        grid-template-columns: 1fr;
+    }
+    
+    .obras-destaque {
+        padding: 40px 15px;
+    }
+    
+    .meu-portfolio {
+        padding: 40px 15px;
+    }
+}
+
+/* Animações adicionais */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.item-portfolio {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.item-portfolio:nth-child(even) {
+    animation-delay: 0.1s;
+}
+
+.item-portfolio:nth-child(3n) {
+    animation-delay: 0.2s;
+}
+
+/* Efeito de loading suave */
+.item-portfolio img {
+    opacity: 1; /* Mudança para garantir visibilidade */
+    transition: opacity 0.3s ease;
+}
+
+.item-portfolio img.loaded {
+    opacity: 1;
+}
+

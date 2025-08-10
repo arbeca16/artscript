@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artScript - Galeria de Arte</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/tudo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+       <div class="logo">
+            <img src="../images/Logo.png" alt="artScript">
+            <span class="botaoHeader" id="Opcoes"> <a href="../html/HomeRestrita.html"> Home</a></span>
+            <span class="botaoHeader" id="Opcoes"> <a href="../html/sobre.html"> Sobre</a></span>
+          <span class="botaoHeader" id="Opcoes"> <a href="../html/evento.html"> Evento</a></span>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar">
+            <button class="clear-button">×</button>
+        </div>
+        <div class="profile-menu">
+           
+
+<div class="botao-container">
+        <div class="texto-area">
+            <span class="texto"> <a href="../html/Login.html"> login </a></span>
+        </div>
+        <div class="imagem-area">
+            <img src="../images/download.jfif" alt="Avatar do usuário" onerror="this.style.display='none';
+             this.nextElementSibling.style.display='flex';">
+            <div class="imagem-placeholder" style="display: none;"></div>
+        </div>
+    </div>
+
+            <nav class="nav">
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+ <!--menu hamburgue-->
+ 
+    <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="main-menu">
+  <div class="menu-icon" aria-hidden="true">
+    <span class="horizontal"></span>
+    <span class="vertical"></span>
+  </div>
+</button>
+
+<nav id="main-menu" class="menu-panel" aria-hidden="true">
+  <ul>
+    <li><a href="../html/Publicar.html" tabindex="-1">Publicar</a></li>
+  </ul>
+</nav>
+
+<script>
+  const menuBtn = document.querySelector('.menu-btn');
+  const menuPanel = document.getElementById('main-menu');
+  const links = menuPanel.querySelectorAll('a');
+
+  menuBtn.addEventListener('click', () => {
+    const isActive = menuBtn.classList.toggle('active');
+    menuBtn.setAttribute('aria-expanded', isActive);
+    if(isActive) {
+      menuPanel.classList.add('open');
+      menuPanel.setAttribute('aria-hidden', 'false');
+      links.forEach(link => link.setAttribute('tabindex', '0'));
+    } else {
+      menuPanel.classList.remove('open');
+      menuPanel.setAttribute('aria-hidden', 'true');
+      links.forEach(link => link.setAttribute('tabindex', '-1'));
+    }
+  });
+</script>
+<!--menu hamburgue-->
+
+    <script src="../html/script.js"></script>
+
+</body>
+</html>
